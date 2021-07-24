@@ -27,7 +27,8 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 	public void configure(HttpSecurity http) throws Exception {  
 	    http  
 	        .authorizeRequests()  
-	        .antMatchers("/resources/**", "/").permitAll()
+	        .antMatchers("/resources/**").permitAll()
+	      //.antMatchers("/resources/**", "/").permitAll()
 	        .anyRequest().authenticated()  
 	        .and()  
 	        .formLogin()  

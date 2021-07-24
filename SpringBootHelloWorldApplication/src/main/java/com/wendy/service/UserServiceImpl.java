@@ -4,11 +4,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
 
+import com.wendy.model.Product;
 import com.wendy.model.User;
 import com.wendy.repository.RoleRepository;
 import com.wendy.repository.UserRepository;
 
 import java.util.HashSet;
+import java.util.List;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -30,6 +32,12 @@ public class UserServiceImpl implements UserService {
     public User findByUsername(String username) {
         return userRepository.findByUsername(username);
     }
+    
+
+	 public List<User>getAllUser(){
+		 return userRepository.findAll();
+	 }
+	 
 
 
 

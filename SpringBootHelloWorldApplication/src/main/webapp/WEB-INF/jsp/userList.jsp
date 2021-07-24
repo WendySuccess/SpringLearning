@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-       <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+    <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>   
 <!DOCTYPE html>
 <html>
@@ -16,26 +16,26 @@
     padding-top: 50px;
     padding-left: 20px;
 ">
-<a class="btn btn-primary btn-sm" href="/Product/new" role="button">New</a>
+
+<form:form action="/User/search" method="post" modelAttribute="user">
+<label for="search_input">Search:</label> 
+  <form:input path="username" />
+    </input> 	<input type="submit"  value="Search"/>
+                         </form:form>
   <table class="table">
            <thead>
                 <tr>
                     <th>Id</th>
-                    <th>Product Name</th>
-                    <th>Price</th>
+                    <th>Name</th>
+       
                 </tr>
             </thead>
             <tbody>
-                <c:forEach items="${products}" var="product">
+                <c:forEach items="${users}" var="user">
                     <tr>
-                        <td>${product.id}</td>
-                        <td>${product.productname}</td>
-                        <td>${product.price}</td>
-                   
-                        <td><a href="<c:url value='/Product/edit-${product.id}' />" 
-                        class="btn btn-success custom-width">edit</a></td>
-                        <td><a href="<c:url value='/Product/delete-${product.id}' />" 
-                        class="btn btn-danger custom-width">delete</a></td>
+                        <td>${user.id}</td>
+                        <td>${user.username}</td>
+                        
                     </tr>
                 </c:forEach>
             </tbody>

@@ -6,7 +6,7 @@
 header {
   width: 100%;
   height: 110px;
-  background-color: #0683c9;}
+  background-color: #8cabbc;}
   header nav {
     display: block;
     float: none;
@@ -26,14 +26,36 @@ header {
 <header>
     <div class="container clearfix">
         <h1 id="logo">
-            FlyAway !
+            Sporty Shoes !
         </h1>
-        <h5>Your Airline Booking Portal</h5>
+        <h5>Your Best Shoes Portal</h5>
         <nav>
-            <a href="adminLogin.jsp">Admin Login</a>
-         
+	         <form id="logoutForm" method="POST" action="logout">
+	            <input type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}"/>
+	        </form>
+			<!-- <a onclick="document.forms['logoutForm'].submit()">Logout</a>-->
+			<a href="/logout">Logout</a>
         </nav>
+       
     </div>
+     <nav class="navbar navbar-expand-lg navbar-light bg-light">
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarNav">
+		    <ul class="navbar-nav">
+		      <li class="nav-item active">
+		        <a class="nav-link" href="/Product/">Products <span class="sr-only">(current)</span></a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="/User/">Users </a>
+		      </li>
+		      <li class="nav-item">
+		        <a class="nav-link" href="/Report/">Purchase Report</a>
+		      </li>
+		    </ul>
+		  </div>
+		</nav>
 </header><!-- /header -->
 </body>
 </html>
