@@ -22,7 +22,7 @@ public class HelloWorldController {
 	@RequestMapping("/")
 	public String sayHello() {
 		System.out.println("test");
-		return "adminLogin";
+		return "welcome";
 	}
 	
 	@RequestMapping("/LoginController")

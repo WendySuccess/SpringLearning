@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
+import org.springframework.web.servlet.view.RedirectView;
 
 import com.wendy.model.Product;
 import com.wendy.model.User;
@@ -80,16 +82,17 @@ public class UserController {
 	    }
 
 	    @PostMapping("/ChangePassword")
-	    public String registration(@ModelAttribute("user") User userForm) {
-
+	    public RedirectView ChangePassword(@ModelAttribute("user") User userForm, RedirectAttributes redirectAttributes) {
+	    	final RedirectView redirectView = new RedirectView("/User/ChangePassword", true);
 	    	System.out.println(userForm);
 	    	 User usertosave = userService.findByUsername(userForm.getUsername());
 	    		System.out.println(usertosave);
 	    	usertosave.setPassword(bCryptPasswordEncoder.encode(userForm.getPassword()));
 	        //user.setRoles(new HashSet<>(roleRepository.findAll()));
-	        userRespository.save(userForm);
+	        userRespository.save(usertosave);
+	        redirectAttributes.addFlashAttribute("addProductSuccess", true);
+	        return redirectView;
 
-	        return "ChangePassword";
 	    }
 	
 }

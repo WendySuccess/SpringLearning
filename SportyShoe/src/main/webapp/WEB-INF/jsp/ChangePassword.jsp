@@ -17,7 +17,7 @@
     padding-left: 20px;
 ">
    <c:if test="${addProductSuccess}">
-            <div>Successfully added/update Product. </div>
+            <div>Successfully update Password. </div>
         </c:if>
     	 
 	 		 <c:url var="new_url" value="/User/ChangePassword"/>
