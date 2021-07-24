@@ -1,0 +1,103 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+<filter>
+  <filter-name>AuthenticationFilter</filter-name>
+    <display-name>AuthenticationFilter</display-name>
+	<description></description>
+    <filter-class>com.flyaway.Controller.AuthenticationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AuthenticationFilter</filter-name>
+    <servlet-name>LoginController</servlet-name>
+  </filter-mapping>
+  <servlet>   
+    <servlet-name>DashBoardServlet</servlet-name>
+    <display-name>DashBoardServlet</display-name>
+    <description></description>
+    <servlet-class>com.flyaway.Controller.DashBoardServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <servlet-name>LogoutServlet</servlet-name>
+    <display-name>LogoutServlet</display-name>
+    <description></description>
+    <servlet-class>com.flyaway.Controller.LogoutServlet</servlet-class>
+  </servlet>
+ <servlet>
+    <servlet-name>LoginController</servlet-name>
+    <display-name>LoginController</display-name>
+    <description></description>
+    <servlet-class>com.flyaway.login.LoginController</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>ChangePasswordServlet</servlet-name>
+  	<display-name>ChangePasswordServlet</display-name>
+  	<description></description>
+  	<servlet-class>com.flyaway.login.ChangePasswordServlet</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SearchFlight</servlet-name>
+  	<display-name>SearchFlight</display-name>
+  	<description></description>
+  	<servlet-class>com.flyaway.Controller.SearchFlight</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>FlightRegister</servlet-name>
+  	<display-name>FlightRegister</display-name>
+  	<description></description>
+  	<servlet-class>com.flyaway.Controller.FlightRegister</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>PersonalRegister</servlet-name>
+  	<display-name>PersonalRegister</display-name>
+  	<description></description>
+  	<servlet-class>com.flyaway.Controller.PersonalRegister</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>PaymentStatus</servlet-name>
+  	<display-name>PaymentStatus</display-name>
+  	<description></description>
+  	<servlet-class>com.flyaway.Controller.PaymentStatus</servlet-class>
+  </servlet>
+    <servlet-mapping>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/LoginController</url-pattern>
+  </servlet-mapping>
+      <servlet-mapping>
+    <servlet-name>DashBoardServlet</servlet-name>
+    <url-pattern>/DashBoardServlet</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping>
+    <servlet-name>LogoutServlet</servlet-name>
+    <url-pattern>/LogoutServlet</url-pattern>
+  </servlet-mapping>
+      <servlet-mapping>
+      	<servlet-name>ChangePasswordServlet</servlet-name>
+      	<url-pattern>/ChangePasswordServlet</url-pattern>
+      </servlet-mapping>
+
+      <servlet-mapping>
+      	<servlet-name>SearchFlight</servlet-name>
+      	<url-pattern>/SearchFlight</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping>
+      	<servlet-name>FlightRegister</servlet-name>
+      	<url-pattern>/FlightRegister</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping>
+      	<servlet-name>PersonalRegister</servlet-name>
+      	<url-pattern>/PersonalRegister</url-pattern>
+      </servlet-mapping>
+      <servlet-mapping>
+      	<servlet-name>PaymentStatus</servlet-name>
+      	<url-pattern>/PaymentStatus</url-pattern>
+      </servlet-mapping>
+
+  <welcome-file-list>
+	<welcome-file>index.jsp</welcome-file>
+   </welcome-file-list>
+
+</web-app>
