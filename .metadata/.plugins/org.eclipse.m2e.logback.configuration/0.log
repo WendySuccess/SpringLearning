@@ -9342,3 +9342,4 @@ org.eclipse.core.runtime.CoreException: Launch configuration Application (1) ref
 2021-07-25 00:59:07,911 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2021-07-25 00:59:07,911 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered properties files.
 2021-07-25 00:59:07,911 [Worker-40: Building] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\XX605\SpringLearning\SportyShoe\src\test\resources
+2021-07-31 21:17:32,299 [Worker-5: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
